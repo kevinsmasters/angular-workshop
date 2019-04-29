@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 
@@ -10,8 +11,8 @@ import { TodoItemComponent } from "./components/todo-item/todo-item.component";
 import { HeaderComponent } from "./components/layout/header/header.component";
 import { AddTodoComponent } from "./components/add-todo/add-todo.component";
 import { AboutComponent } from "./components/pages/about/about.component";
-import { PhotosComponent } from './components/photos/photos.component';
-import { PhotoItemComponent } from './components/photo-item/photo-item.component';
+import { PhotosComponent } from "./components/photos/photos.component";
+import { PhotoItemComponent } from "./components/photo-item/photo-item.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,13 @@ import { PhotoItemComponent } from './components/photo-item/photo-item.component
     PhotosComponent,
     PhotoItemComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgbModule.forRoot()
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
